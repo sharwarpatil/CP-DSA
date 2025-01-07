@@ -22,9 +22,8 @@ void Insertnodepos(Node* &head,int pos,int d){
         nodenew->next=head;
         head=nodenew;
         return;
-
     }
-    
+
     Node* temp = head;
     int count = 1;
     while(count<pos-1){
