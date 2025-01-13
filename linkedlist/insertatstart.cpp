@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 class Node{
     public:
         int data;
@@ -10,10 +11,10 @@ class Node{
             this->next=NULL;
         }
 };
-void Insertnode(Node* &tail,int d){
+void Insertnode(Node* &head,int d){
     Node* temp = new Node(d);
-    tail-> next = temp;
-    tail = temp;
+    temp-> next = head;
+    head = temp;
 }
 
 void printdata(Node* &head){
@@ -27,13 +28,10 @@ void printdata(Node* &head){
 int main(){
     Node* node1= new Node(2);
     cout<<node1->data<<" "<<node1->next<<endl;
-    Node* head = node1; 
-    Node* tail = node1; 
+    Node* head = node1;
+    Node* tail = node1;
     printdata(head);
-    Insertnode(tail, 13);
+    Insertnode(head,13);
     printdata(head);
-    Insertnode(tail, 25);
-    printdata(head);
-
-    return 0;
+    cout<<head<<" "<<tail;
 }
