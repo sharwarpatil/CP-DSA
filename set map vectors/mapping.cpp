@@ -12,6 +12,7 @@ int main()
     m[2]="Hi";
     m[3]="Hello";
     m.insert({2,"No"}); // 2 value will remain Hi only
+    m[5]="5";
     for(auto i : m){
         cout<<i.first<<endl;
     }
@@ -20,7 +21,7 @@ int main()
     }
     cout<<m.begin()->first<<endl;
     
-    // // find
+    // // find count of 3
    cout<<"finding 3 -> "<<m.count(3)<<endl;
     
     // //delete

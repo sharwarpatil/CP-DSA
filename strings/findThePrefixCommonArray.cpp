@@ -17,7 +17,7 @@ public:
         for (int num : b) {
             charcountb[num]++;
         }
-
+    
         for (auto &entry : charcounta) {
             int num = entry.first;
             if (charcountb.find(num) != charcountb.end() && charcountb[num] == entry.second) {
